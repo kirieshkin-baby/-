@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 — Личный кабинет | Герои Элисты</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&display=swap&quot;" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <span class="star">★</span>
+                    </div>
+                    <div class="logo__text">
+                        <span class="main-text">ГЕРОИ</span>
+                        <span class="sub-text">ЭЛИСТЫ</span>
+                    </div>
+                </div>
+
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="account.html">Личный кабинет</a></li>
+                        <li><a href="route.html">Маршрут</a></li>
+                        <li><a href="excursion.html">Расписание</a></li>
+                    </ul>
+                </nav>
+
+                <button id="theme-toggle" class="theme-toggle">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="cabinet-header">
+                    <h1>Личный кабинет</h1>
+                    <a href="index.html" class="btn secondary">Выйти из профиля</a>
+                </div>
+
+                <div class="cabinet-grid">
+                    <div class="cabinet-form">
+                        <h2>Записаться на экскурсию</h2>
+                        <form id="booking-form" class="form">
+                            <div class="form-group">
+                                <label>Экскурсия *</label>
+                                <select required>
+                                    <option value="">Выберите экскурсию</option>
+                                    <option>«Подвиг калмыцкого народа»</option>
+                                    <option>«Герои Элисты»</option>
+                                    <option>«Путь Победы»</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Дата *</label>
+                                <input type="date" value="2026-05-26" readonly>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Время *</label>
+                                <select required>
+                                    <option value="">Выберите время</option>
+                                    <option>09:00</option>
+                                    <option>10:00</option>
+                                    <option>11:00</option>
+                                    <option>12:00</option>
+                                    <option>13:00</option>
+                                    <option>14:00</option>
+                                    <option>15:00</option>
+                                    <option>16:00</option>
+                                    <option>17:00</option>
+                                    <option>18:00</option>
+                                    <option>19:00</option>
+                                    <option>20:00</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Количество человек *</label>
+                                <input type="number" min="1" max="10" value="1" required>
+                            </div>
+
+                            <button type="submit" class="btn" style="width: 100%; margin-top: 20px; padding: 16px;">
+                                Записаться на экскурсию
+
+
+</button>
+                        </form>
+                    </div>
+                    <div class="my-bookings">
+                        <h2>Мои записи</h2>
+                        <div class="booking-card">
+                            <h3>«Герои Элисты»</h3>
+                            <p><strong>Дата:</strong> 8 июля 2024</p>
+                            <p><strong>Время:</strong> 14:00</p>
+                            <p><strong>Количество человек:</strong> 3</p>
+                            <span class="status confirmed">✓ Подтверждено</span>
+                        </div>
+
+                        <div class="booking-card">
+                            <h3>«Подвиг калмыцкого народа»</h3>
+                            <p><strong>Дата:</strong> 10 июля 2024</p>
+                            <p><strong>Время:</strong> 11:00</p>
+                            <p><strong>Количество человек:</strong> 2</p>
+                            <span class="status pending">⏳ Ожидает подтверждения</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Телефон: <a href="tel:+74842234567">+7 (4842) 23-45-67</a></p>
+            <p>Email: <a href="mailto:family@cosmos.ru">family@cosmos.ru</a></p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
