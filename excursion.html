@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 — Расписание экскурсий | Герои Элисты</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&display=swap&quot;" rel="stylesheet">
+    <style>
+        .schedule-hero {
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                        url('media/img/schedule-bg.jpg') center/cover no-repeat;
+            color: white;
+            padding: 120px 0 90px;
+            text-align: center;
+        }
+
+        .schedule-container {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 40px;
+            margin: -70px auto 80px;
+            max-width: 1300px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 20px 12px;
+            font-size: 1.1rem;
+        }
+
+        td {
+            padding: 18px 12px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .excursion-name {
+            text-align: left !important;
+            font-weight: 600;
+            color: var(--accent);
+            padding-left: 30px !important;
+            font-size: 1.15rem;
+        }
+
+        .seat-available {
+            background: rgba(74, 222, 128, 0.3);
+            color: #4ade80;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .seat-available:hover {
+            background: rgba(74, 222, 128, 0.5);
+            transform: scale(1.08);
+        }
+
+        .seat-full {
+            background: rgba(248, 113, 113, 0.3);
+            color: #f87171;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <span class="star">★</span>
+                    </div>
+                    <div class="logo__text">
+                        <span class="main-text">ГЕРОИ</span>
+                        <span class="sub-text">ЭЛИСТЫ</span>
+                    </div>
+                </div>
+
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="registration.html">Регистрация</a></li>
+                        <li><a href="excursion.html">Расписание</a></li>
+                        <li><a href="account.html">Личный кабинет</a></li>
+                        <li><a href="route.html">Маршрут</a></li>
+                    </ul>
+                </nav>
+
+                <button id="theme-toggle" class="theme-toggle">🌙</button>
+            </div>
+        </div>
+    </header>
+    <section class="schedule-hero">
+        <div class="container">
+            <h1 style="font-size: 3.4rem; margin-bottom: 20px;">Расписание экскурсий</h1>
+            <p style="font-size: 1.35rem; max-width: 800px; margin: 0 auto;">
+                Выберите удобное время и присоединяйтесь к маршруту памяти героев
+            </p>
+        </div>
+    </section>
+
+    <main>
+        <div class="schedule-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="excursion-name">Экскурсия</th>
+                        <th>09:00</th>
+                        <th>10:00</th>
+                        <th>11:00</th>
+                        <th>12:00</th>
+                        <th>13:00</th>
+                        <th>14:00</th>
+                        <th>15:00</th>
+                        <th>16:00</th>
+                        <th>17:00</th>
+                        <th>18:00</th>
+
+
+<th>19:00</th>
+                        <th>20:00</th>
+                        <th>21:00</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="excursion-name">«Подвиг калмыцкого народа»</td>
+                        <td class="seat-available">12</td>
+                        <td class="seat-available">8</td>
+                        <td class="seat-full">0</td>
+                        <td class="seat-available">15</td>
+                        <td class="seat-available">10</td>
+                        <td class="seat-full">0</td>
+                        <td class="seat-available">14</td>
+                        <td class="seat-available">9</td>
+                        <td class="seat-available">11</td>
+                        <td class="seat-full">0</td>
+                        <td class="seat-available">7</td>
+                        <td class="seat-available">5</td>
+                        <td class="seat-full">0</td>
+                    </tr>
+                    <tr>
+                        <td class="excursion-name">«Герои Элисты»</td>
+                        <td class="seat-available">18</td>
+                        <td class="seat-available">12</td>
+                        <td class="seat-available">9</td>
+                        <td class="seat-full">0</td>
+                        <td class="seat-available">16</td>
+                        <td class="seat-available">11</td>
+                        <td class="seat-available">13</td>
+                        <td class="seat-full">0</td>
+                        <td class="seat-available">10</td>
+                        <td class="seat-available">8</td>
+                        <td class="seat-available">6</td>
+                        <td class="seat-full">0</td>
+                        <td class="seat-available">4</td>
+                    </tr>
+                    <tr>
+                        <td class="excursion-name">«Путь Победы»</td>
+                        <td class="seat-full">0</td>
+                        <td class="seat-available">14</td>
+                        <td class="seat-available">10</td>
+                        <td class="seat-available">7</td>
+                        <td class="seat-full">0</td>
+                        <td class="seat-available">15</td>
+                        <td class="seat-available">12</td>
+                        <td class="seat-available">9</td>
+                        <td class="seat-full">0</td>
+                        <td class="seat-available">11</td>
+                        <td class="seat-available">8</td>
+                        <td class="seat-available">6</td>
+                        <td class="seat-full">0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 80px;">
+            <a href="2.html" class="btn" style="font-size: 1.25rem; padding: 18px 60px;">
+                Записаться на экскурсию
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Телефон: <a href="tel:+74842234567">+7 (4842) 23-45-67</a></p>
+            <p>Email: <a href="mailto:family@cosmos.ru">family@cosmos.ru</a></p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
