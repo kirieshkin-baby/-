@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 — Регистрация | Герои Элисты</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&display=swap&quot;" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="logo">
+                    <div class="logo__text">
+                        <span>ГЕРОИ</span>
+                        <span>ЭЛИСТЫ</span>
+                    </div>
+                </div>
+
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="registration.html">Регистрация</a></li>
+                        <li><a href="excursion.html">Расписание</a></li>
+                        <li><a href="account.html">Личный кабинет</a></li>
+                        <li><a href="route.html">Маршрут</a></li>
+                    </ul>
+                </nav>
+
+                <button id="theme-toggle" class="theme-toggle">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="registration-section">
+            <div class="container">
+                <div class="form-container">
+                    <h1>Регистрация на экскурсию</h1>
+                    <p class="form-subtitle">Присоединяйтесь к маршруту «Герои Великой Отечественной Войны»</p>
+
+                    <form id="registration-form" class="form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Имя *</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Фамилия *</label>
+                                <input type="text" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>E-mail *</label>
+                                <input type="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Возраст *</label>
+                                <input type="number" min="6" max="100" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Пол *</label>
+                                <select required>
+                                    <option value="">Выберите пол</option>
+                                    <option value="male">Мужской</option>
+                                    <option value="female">Женский</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Пароль *</label>
+                            <input type="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Повторите пароль *</label>
+                            <input type="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Семейная фотография</label>
+                            <div class="file-upload">
+                                <input type="file" id="family-photo" accept="image/*">
+                                <label for="family-photo" class="upload-label">Выбрать файл</label>
+                            </div>
+                        </div>
+                        <div class="family-members">
+                            <h3>Члены семьи</h3>
+                            <div class="family-group">
+                                <input type="text" placeholder="Имя">
+                                <input type="text" placeholder="Фамилия">
+                                <input type="number" placeholder="Возраст" style="width: 90px;">
+                                <select>
+                                    <option>Мужской</option>
+                                    <option>Женский</option>
+                                </select>
+                            </div>
+                            <button type="button" class="btn secondary" onclick="addFamilyMember()">+ Добавить члена семьи</button>
+                        </div>
+
+                        <div class="agreement">
+                            <input type="checkbox" id="agree" required>
+                            <label for="agree">Я согласен на обработку персональных данных *</label>
+                        </div>
+
+                        <button type="submit" class="btn" style="width: 100%; padding: 16px; font-size: 1.1rem;">
+                            <nav class="nav">
+                        </button>
+                        <ul class="nav__list">
+                                <li><a href="account.html">Зарегистрироваться</a></li>
+                            </ul>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Телефон: <a href="tel:+79018471967">+7 (901) 847-19-67</a></p>
+            <p>Email: <a href="mailto:patriotiRussia@yandex.ru">patriotiRussia@yandex.ru</a></p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
