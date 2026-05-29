@@ -527,3 +527,98 @@ max-width: 996px {
         margin: 0 auto;
     }
 }
+
+/* ====================== СЛАЙДЕР ОТЗЫВОВ ====================== */
+.reviews-slider {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+    min-height: 380px;
+}
+
+.review-slide {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.review-slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.review-content {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    background: var(--card-bg);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+}
+
+.review-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent);
+    flex-shrink: 0;
+}
+
+.review-text p {
+    font-size: 1.1rem;
+    line-height: 1.65;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.review-text strong {
+    display: block;
+    color: var(--accent);
+    margin-bottom: 5px;
+}
+
+.slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.slider-btn {
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.slider-btn:hover {
+    background: var(--accent);
+    color: white;
+}
+
+.slider-dots {
+    display: flex;
+    gap: 12px;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    background: var(--border);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dot.active {
+    background: var(--accent);
+    transform: scale(1.3);
+}
